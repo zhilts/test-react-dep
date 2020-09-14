@@ -1,0 +1,21 @@
+version: '2.4'
+
+services:
+  dev:
+    command: ['npm', 'start']
+    build:
+      context: .
+    tty: true
+    volumes:
+      - shared_webapp:/app
+      - node_modules:/app/node_modules
+
+volumes:
+  shared_webapp:
+    name: shared_webapp
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD
+      o: bind
+  node_modules: {}
