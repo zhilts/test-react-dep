@@ -4,7 +4,7 @@ class TestSharedComponent extends Component {
     render() {
         return (
             <div>
-                Hello world
+                Hello world v2
             </div>
         );
     }
